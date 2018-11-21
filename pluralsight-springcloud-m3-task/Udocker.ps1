@@ -49,20 +49,28 @@
 ## REMOTE to MYSQL
 ## ------------------
 
-# 1 -> docker exec -it pluralsight bash -l
-# 2 -> mysql -u root -pilovebnhp -h 192.168.99.100:3306 tasklogs 
+# start eclipes external too to run MYSQL from the YML
+# login to the container
+#     1 -> docker exec -it pluralsight bash -l
+#     2 -> mysql -u root -pilovebnhp -h 192.168.99.100:3306 tasklogs 
 #      mysql -u root -pilovebnhp
+# first time container run? let access   
+# 3 GRANT ALL PRIVILEGES ON * . * TO 'psuser'@'%';
 
-
-# winpty docker exec -it  pluralsight mysql -uroot -p    -- remote to the container
+# 4. mysql commands 
 # show databases;
 # exit
 #  use [db name];  show tables;   SELECT * FROM [table name];
 
+# ---  
 # Let root to access from any IP
 # use mysql;
 # flush privileges;
 # update user set host="%" where user="root" and host="localhost";
+# GRANT ALL PRIVILEGES ON * . * TO 'psuser'@'%';
+
+# -- admin commands
 # mysqladmin status
 # mysqladmin -uroot -pilovebnhp refresh
 # mysqladmin -uroot -pilovebnhp reload
+
