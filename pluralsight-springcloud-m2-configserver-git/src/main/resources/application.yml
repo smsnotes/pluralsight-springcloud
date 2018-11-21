@@ -1,0 +1,20 @@
+---
+server:  port: 8888
+
+logging:  level:    org.springframework.cloud.config : DEBUG
+    
+    
+spring:
+  cloud:    config:      server:
+        git:          uri: https://github.com/smsnotes/pluralsight-springcloud-m2-configserver-git
+          search-paths:          - 'station*'
+          repos:            pref :
+              pattern :
+                - '*/pref'
+              uri : https://github.com/smsnotes/pluralsight-springcloud-m2-configserverpref
+              search-paths:
+                - 'station*'
+  security:
+    user:
+        name: pluralsight1
+        password: pluralsight1

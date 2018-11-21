@@ -1,0 +1,19 @@
+﻿---
+version: '3'
+services:
+    db:
+        image: mysql/mysql-server
+        container_name: pluralsight
+        restart: always
+        environment:
+          - MYSQL_ROOT_PASSWORD=ilovebnhp
+          - AAMYSQL_RANDOM_ROOT_PASSWORD=yes
+          - MYSQL_USER=psuser
+          - MYSQL_DATABASE=tasklogs
+          - MYSQL_PASSWORD=pspass
+          - MYSQL_LOG_CONSOLE=true          
+          
+        ports :
+          - 3306:3306  
+          
+          
