@@ -1,9 +1,23 @@
 ﻿---
 version: '3'
 services:
-    db:
+    rabbitmq:
+        image: rabbitmq:3.7.8-management
+        container_name: rabbitmqpluralsight
+        hostname : rabbitmqpluralsighthost
+        depends_on:
+          - mysqldb          
+        environment:        
+          - hostname=rabbitmqpluralsighthostenv
+          - RABBITMQ_DEFAULT_USER=psuser
+          - RABBITMQ_DEFAULT_PASS=pspass
+          - RABBITMQ_DEFAULT_VHOST=rabbitmqpluralsighthostenv2
+        ports :
+          - 15672:15672
+             
+    mysqldb:    
         image: mysql/mysql-server
-        container_name: pluralsight
+        container_name: mysqlpluralsight
         restart: always
         environment:
           - MYSQL_ROOT_PASSWORD=ilovebnhp

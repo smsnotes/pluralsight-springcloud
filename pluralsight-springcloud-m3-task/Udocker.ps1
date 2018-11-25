@@ -17,7 +17,8 @@
 # docker  rmi  mysql
 # docker run --name=pluralsight -d mysql/mysql-server
 
-# docker stop pluralsight
+# docker stop rabbitmqpluralsight
+# docker stop mysqlpluralsight
 # docker  images
 # docker container rm dd956e34874f
 # docker container --help
