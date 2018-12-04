@@ -6,7 +6,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class TaskConfig {
 
-	@Bean(name="TaskProcessor")
+	//@Bean(name="TaskProcessorA")
+	@Bean
 	 public TaskProcessor taskProcessor() {
 		 return new TaskProcessor();
 	 };
