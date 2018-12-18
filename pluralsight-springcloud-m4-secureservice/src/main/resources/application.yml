@@ -1,0 +1,22 @@
+---
+server :
+ port : 9001
+ servlet :
+      contextPath : /services
+      
+      
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9000/services/user # userInfoUri: https://api.github.com/user - for github OAUTH2
+      
+logging:
+ level:
+   org.springframework.security: DEBUG
+   
+         
+      
+      
+     
+
+  
