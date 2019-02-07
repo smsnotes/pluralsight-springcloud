@@ -32,3 +32,4 @@ hs_err_pid*
 .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs
 .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs
 .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs
+/.metadata/
